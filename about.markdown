@@ -4,15 +4,18 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi. I'm Lee Azzarello. This is a blog. I write about technology, classical composers and art.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+During the day I work in a [rocket factory](https://astra.com).
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+On weekends I practice classical piano.
 
+Occasionally I make [experimental electronic music](https://bandcamp.com/lazzarello/following/artists_and_labels).
 
-[jekyll-organization]: https://github.com/jekyll
+I have anarcho-communist beliefs. I try and express them through my writing without being a pundit on politics.
+
+Code on [Github](https://github.com/lazzarello).
+
+Shitposts on [Twitter](https://twitter.com/leeazzarello).
+
+Mood boards [on are.na](https://www.are.na/lee-azzarello).
