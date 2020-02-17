@@ -13,10 +13,10 @@ Sorting out the publishing pipeline for netify and Jekyll.
 * A List
 * Of things
 
-{% hilight python %}
+{% highlight python %}
 def preformat(text)
   print(text)
-{% endhilight %}
+{% endhighlight %}
 
 that markdown thing  
 where I add an empty space  
