@@ -1,6 +1,22 @@
 #!/bin/bash
 title=$1
-filename=`date +%Y-%m-%d`-$title.md
-# get going with templates
-# https://stackoverflow.com/questions/3785320/how-to-use-a-template-in-vim
-vim _posts/$filename
+
+if [[ -z $title ]]; then
+  echo "pass in a string for the title for this post"
+  exit 1
+fi
+
+today=`date +%Y-%m-%d`
+filename=${today}-${title}.md
+template=$(cat <<EOF
+---
+layout: post
+title:  "${title}"
+date:  $(date '+%Y-%m-%d %H:%M:%S%z')
+categories: me
+---
+EOF
+)
+echo "${template}" >> _posts/${filename}
+
+ vim _posts/${filename}
