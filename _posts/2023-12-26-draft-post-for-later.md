@@ -4,4 +4,6 @@ scheduling this for later.
 
 just learned that Sophie isn't as popular as I thought she is.
 
-murder on the dance floor is also p good song.
+murder on the dance floor is also p good song...
+
+alright this is pretty cool.
