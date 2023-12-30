@@ -1,7 +1,11 @@
---- layout: post
+--- 
+layout: post
 title:  "GPU Benchmarks with Bark"
 date:  2023-12-27 14:11:32-0800
-categories: TTS, research, genAI
+categories: 
+  - TTS
+  - research
+  - genAI
 ---
 
 ## What is Bark?
