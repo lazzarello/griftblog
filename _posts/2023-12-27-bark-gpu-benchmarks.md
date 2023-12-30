@@ -10,12 +10,13 @@ It's an open source pre-trained model for generating audio samples from text. Th
 
 ## How does it perform?
 
-On a `NVIDIA 4070 Laptop` I can generate three 6 second arrays of speech from the following inputs in 26 seconds.
+On a `NVIDIA GeForce RTX 4070 Laptop GPU` I can generate three 6 second arrays of speech from the following inputs in 26 seconds.
 
 ```python
-input = ["",
-         "",
-	 ""]
+text_input = [
+    "Does longer text generate with better performance? [sigh] I don't think so.",
+    "But what if I do it with a list? [clears throat]",
+    "Does it generate faster in this case?"
 ```
 
 The samples are output into an array but it still takes the full amount of time to get the first byte of samples from the first item in the list. This would imply that if there is a way to either run some of the stages in parallel or determine when the first sample of audio is written into the array, it could be possible to stream the output. Especially considering the results from running on a `NVIDIA H100 PCIe` leased in the South Africa (ZA) availability zone. The same notebook returns the first byte in 16 seconds.
