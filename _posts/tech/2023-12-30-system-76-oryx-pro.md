@@ -7,11 +7,9 @@ categories:
   - computer
   - linux
 ---
-# System76 Oryx Pro
-
 My employer bought me a [System76 Oryx Pro](https://system76.com/laptops/oryx) which I customized with a Nvidia 4070, 32 GB of RAM and 2TB of extra NVMe storage. It came out to almost $3000 including tax and shipping.
 
-My intended use is for software development, audio engineering and AI research and development. So far so good! It's a great computer. I removed the Pop!_OS distribution created by the vendor and replaced it with Ubuntu Studio 23.10. All the hardware does what I expect. The GPU has decent specs. Here's the output of `nvidia-smi`
+My intended use is for software development, audio engineering and AI research and development. So far so good! It's a great computer. I removed the Pop!_OS distribution installed by the vendor and replaced it with Ubuntu Studio 23.10. All the hardware does what I expect. The GPU has decent specs. Here's the output of `nvidia-smi`
 
 ```
 Sat Dec 30 20:29:41 2023
@@ -50,21 +48,18 @@ It has two USB-C connectors, one on the rear and one on the right. Only one of t
  
 The Bluetooth and Wifi chips are on the same module and each antenna connection has a shorter range compared to other devices. 
 
-The bluetooth radio with airpods pro drops out at about 20 feet compared to the same headphones paired with an iPad Pro, which has no drop outs for 25 to 30 feet.
+The bluetooth radio with Airpods Pro drops out at about 15 feet compared to the same headphones paired with an iPad Pro, which has no drop outs for 25 to 30 feet.
 
-The wifi radio 2.4 GHz has about half the of my iPad Pro from the same location.
+The 2.4 GHz wifi radio has about half the signal strength of my iPad Pro from the same location. The 5 GHz seems to be a little better.
 
 ## Kernel drivers crash intermittently
 
 The bluetooth driver just like, crashes sometimes. The icon disapears from the KDE toolbar.
 
-The Thunderbolt driver crashes when my docking station is disconnected and reconnected...sometimes. After a memory dump to `dmesg` the dock continues to work for the displays but not as a USB hub or Ethernet adapter. A restart is required.
-
-* kernel has some weird thunderbolt bug that's intermittent. It supported dual Thunderbolt to DisplayPort displays on the first try, when the StarTech adapter was trusted but after a disconnect, the second display failed. See NOTES-.txt for debugging information.
-* It appears the problem is in the docking station not the kernel driver. it only supports dual displays when the hardware is connected in a specific order with a cable that's rated for 
+The Thunderbolt driver crashes when my docking station is disconnected and reconnected...sometimes. After the crash dumps some debugging info to `dmesg` the dock continues to work for the displays but not as a USB hub or Ethernet adapter. A restart is required.
 
 
-*** Thunderbolt dock problem ***
+## Thunderbolt dock problem
 
 I have a [StarTech tb3cdk2dp](https://www.startech.com/en-us/universal-laptop-docking-stations/tb3cdk2dp) which when both DP displays are connected outputs the following error. Only one display is detected.
 
@@ -80,3 +75,5 @@ The dock seems to have some weird bug which depends on the ports connecting in o
 2. Connect DP port 2 going to upper right display
 3. Boot computer
 4. Connect DP port 1 going to upper left display *after logged in*
+
+*Overall this is a great laptop. I'll likely buy one for myself when the Thinkpad stops working*
