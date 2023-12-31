@@ -23,11 +23,9 @@ description: A blog, I write!
 # email: lee@teamnerds.cool
 description: >- # this means to ignore newlines until "baseurl:"
   Notes and frontmatter. Music, Movies. Art, Tech.
-# baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https:/blog.griftmarket.com/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lazzarello
-Blog: /blog
-permalink: /blog/:slug
 
 # Build settings
 plugins:
@@ -35,7 +33,9 @@ plugins:
   - jekyll-remote-theme
   - jekyll-redirect-from
 
-remote_theme: jekyll-bear-theme
+theme: minima
+# remote_theme: jekyll-bear-theme
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
