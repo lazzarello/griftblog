@@ -1,5 +1,5 @@
 #!/bin/bash
-title=$1
+title=$1 
 
 if [[ -z $title ]]; then
   echo "pass in a string for the title for this post"
@@ -11,7 +11,7 @@ filename=${today}-${title}.md
 template=$(cat <<EOF
 ---
 layout: post
-title:  "${title}"
+title:  "$(echo ${title} | tr "-" " ")"
 date:  $(date '+%Y-%m-%d %H:%M:%S%z')
 categories: me
 ---
