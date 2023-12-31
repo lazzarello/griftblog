@@ -1,1 +1,0 @@
-people are talking...unions. it's weird to record things this way. feels old.
