@@ -31,6 +31,6 @@ I think I understand how people are publishing their own benchmarks and claiming
 
 ## Streaming output
 
-Given that the H100 *technically performs at 1.4x realtime, if it can get the audio samples out as they are *streaming into the array* it seems reasonable it could output samples faster than realtime with a ~400 ms buffer.
+Given that the H100 technically performs at 1.4x realtime, if it can get the audio samples out as they are *streaming into the array* it seems reasonable it could output samples faster than realtime with a ~400 ms buffer.
 
 The next challenge is to figure out how to do it.
