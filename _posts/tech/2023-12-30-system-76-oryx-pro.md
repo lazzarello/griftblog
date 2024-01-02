@@ -58,6 +58,11 @@ The bluetooth driver just like, crashes sometimes. The icon disapears from the K
 
 The Thunderbolt driver crashes when my docking station is disconnected and reconnected...sometimes. After the crash dumps some debugging info to `dmesg` the dock continues to work for the displays but not as a USB hub or Ethernet adapter. A restart is required.
 
+## Sleep
+
+Sleep mode works fine with the function key button and the lid closing. I keep the lid close action to just turning off that display since the computer sits closed on a desk most of the time.
+
+One bug with sleep is that attaching the dock (see below) after waking from sleep does not detect the USB ports on the dock. No idea way. A proper reboot brings this hardware back.
 
 ## Thunderbolt dock problem
 
