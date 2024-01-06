@@ -24,23 +24,23 @@ I'll only be working with this XTTS model but in the future exploration of loadi
 
 [A previous post](/tech/computer/linux/2023/12/31/system-76-oryx-pro.html) has the specs on the highest end GPU I can access with mine own hands. It's quite good! Running the server and client in the [fastapi-server directory](https://github.com/lazzarello/TTS/tree/merge-fastapi-server/fastapi-server) on this laptop gets about 1.4x realtime performance! The fans are loud but the performance is good!
 
-Now that we have this benchmark, let's check out some cloud GPU services. The goal is to get equivilent or better performance for the same price. 
+Now that we have this benchmark, let's check out some cloud GPU services. The goal is to get equivalent or better performance for the same price. 
 
 ### Runpod
 
-Runpod advertises as "The Cloud Built for AI." They have data centers in many regions. I'm concerned about those in the United States. In their "community cloud" region (which happens to be two facilities in Kansas City, but they don't tell you that at first) there is a $0.25 per hour server with a Nvidia RTX 4080 Ti. That comes out to about $6 a day for on-demand GPU. Not bad.
+[Runpod](https://www.runpod.io/) advertises themselves as "The Cloud Built for AI." They have data centers in many regions. I'm only concerned about those in the United States. In their "community cloud" region (which happens to be two facilities in Kansas City, but they don't tell you that at first) there is a $0.25 per hour server with a Nvidia RTX 4080 Ti. That comes out to about $6 a day for on-demand GPU. Not bad.
 
 Deploying a server is pretty easy through their GUI and connecting via SSH is also quick. Their default machine image has PyTorch and all the Nvidia + CUDA bits installed at boot time. Downloading and installing the TTS code and models was quick and simple.
 
-Booting up the XTTS server was simple. That's it! Now I have what looks like the equivilent GPU or maybe better to my laptop. Let's test it out.
+Booting up the XTTS server was simple. That's it! Now I have what looks like the equivalent GPU or maybe better to my laptop. Let's test it out.
 
-To my surprise, the same requests for the same text to speech input with the same model took three times as long as on the laptop! Monitoring the GPU usage via `nvtop` provided some hints as to why. This is all speculation, Runpod is a black box. They could be using Kubernetes behind the scenes for all I know, though the server *feels like* a virtual machine.
+To my surprise, the same requests for the same text to speech input with the same model took three times as long as on the laptop! Monitoring the GPU usage via `nvtop` provided some hints as to why.  Requests to this server never exceeded 25% GPU usage, while the same requests to my laptop exceeded 75% GPU while generating audio. 
 
-Requests to this server never exceeded 25% GPU usage, while the same requests to my laptop exceeded 75% GPU while generating audio. While all speculation, I shut down this deployment to look elsewhere.
+This is all speculation because Runpod is a black box. They could be using Kubernetes behind the scenes for all I know, though the server *feels like* a virtual machine. I shut down this deployment to look elsewhere.
 
-## Amazon Web Services (AWS) or The Ubiquitus API for Cloud Stuff
+## Amazon Web Services (AWS) or The Ubiquitous API for Cloud Stuff
 
-I'm no fan of AWS in this current timeline. I mean, it was exciting when the EBS storage came out in EC2. I guess it's alright. Regardless of what I feel, I've built a pretty good career deciphering their marketing materials, service names with duplicate functionality, documentation and pricing policies. I sell these skills to corporations who want to decide To Cloud or Not To Cloud. The "ops" side of the "DevOps" profession. So I guess I am a fan? IDK, they just are like the most ubiquitour public cloud platform.
+I'm no fan of AWS in this current timeline. I mean, it was exciting when the EBS storage feature came out in EC2. When was that? 15 years ago? I guess it's alright. Regardless of what I feel, I've built a pretty good career deciphering their marketing materials, service names with duplicate functionality, documentation and pricing policies. I sell these skills to corporations who want to decide To Cloud or Not To Cloud. The "ops" side of the "DevOps" profession. So I guess I am a fan? IDK, they just are like the most ubiquitous public cloud platform.
 
 Let's see what GPU stuff they have in the us-west-2 region, which is located in the state of Oregon. Here's a table!
 
@@ -63,7 +63,7 @@ We're only doing compute stuff so we only care about the "Tesla drivers." I don'
 
 I found something in the Quickstart AMIs category in EC2 for a "Deep Learning Base OSS Nvidia Driver GPU AMI (Ubuntu 20.04) 20240101". That might be helpful.
 
-Fired up one of those with a G5 instance type. The Nvidia and CUDA stuff is already installed. The login message says there's a conda virtual env outside the system python to access the GPU. It's running an older version of Ubuntu.I try and install PyTorch via conda and it hangs there for about 10 minutes...doing...something?
+Fired up one of those with a G5 instance type. The Nvidia and CUDA stuff is already installed. The login message says there's a conda virtual env outside the system python to access the GPU. It's running an older version of Ubuntu. I try and install PyTorch via conda and it hangs there for about 10 minutes...doing...something?
 
 Shutting this one down and creating a new one with the "Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.1.0 (Ubuntu 20.04) 20240102" AMI claims to have PyTorch installed at boot through a special conda environment. I run python in a REPL from there and `import torch` but it says it does not have access to the GPU.
 
