@@ -28,7 +28,7 @@ Now that we have this benchmark, let's check out some cloud GPU services. The go
 
 ### Runpod
 
-[Runpod](https://www.runpod.io/) advertises themselves as "The Cloud Built for AI." They have data centers in many regions. I'm only concerned about those in the United States. In their "community cloud" region (which happens to be two facilities in Kansas City, but they don't tell you that at first) there is a $0.25 per hour server with a Nvidia RTX 4080 Ti. That comes out to about $6 a day for on-demand GPU. Not bad.
+[Runpod](https://www.runpod.io/) advertises the corporation as "The Cloud Built for AI." They have data centers in many regions. I'm only concerned about those in the United States. In their "community cloud" region (which happens to be two facilities in Kansas City, but they don't tell you that at first) there is a $0.25 per hour server with a Nvidia RTX 4080 Ti. That comes out to about $6 a day for on-demand GPU. Not bad.
 
 Deploying a server is pretty easy through their GUI and connecting via SSH is also quick. Their default machine image has PyTorch and all the Nvidia + CUDA bits installed at boot time. Downloading and installing the TTS code and models was quick and simple.
 
