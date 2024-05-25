@@ -9,7 +9,7 @@ categories:
 
 Spatial Audio is hot! There is a bunch of academic research and open source software implementing higher order Ambisonics. These are my notes, with some comparisons of DSP + programming platforms I have evaluated.
 
-## ChucK
+## [ChucK](https://github.com/ccrma/chuck)
 
 A strongly timed strongly typed language built upon the RtAudio C++ library. All code executes in a virtual machine and is sample accurate.
 
@@ -29,7 +29,7 @@ A strongly timed strongly typed language built upon the RtAudio C++ library. All
 * C++ codebase
 * The virtual machine is 4400 lines of C++, written in 2002
 
-## SuperCollider
+## [SuperCollider](https://github.com/supercollider/supercollider)
 
 A DSP engine and object oriented programming language for sound synthesis.
 
@@ -50,7 +50,7 @@ A DSP engine and object oriented programming language for sound synthesis.
 * New jargon beyond yaw/pitch/roll, i.e. incidence, quality, gain. Yikes!
 * [HRTF data for IEM plugins is pretty old](https://sound.media.mit.edu/resources/KEMAR.html)
 
-## Pyo
+## [Pyo](https://github.com/belangeo/pyo)
 
 A framework for DSP implemented in Python. It has a [Binaural generator that looks pretty simple](https://belangeo.github.io/pyo/api/classes/pan.html#pyo.Binaural). Has an advantage of being implemented in the same language as the GenAI text-to-speech I'm looking to use.
 
