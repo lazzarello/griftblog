@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "building arcade linux"
+title:  "Building Retro Arcade Cabinets With Linux"
 date:  2024-04-28 09:43:16-0700
 categories:
   - tech
