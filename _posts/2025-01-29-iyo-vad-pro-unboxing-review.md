@@ -8,4 +8,4 @@ I was fortunate enough to be accepted into the creators program for the [IYO VAD
 
 I'm excited to integrate this device into a project I'm working on in the psychoacoustic space. Read more about that in [my source code notes](https://github.com/lazzarello/binaural-controller). I expect there will be more blog posts when that gets going this spring.
 
-{% include [vad pro unboxing video](vad-pro-unboxing-video.html) %}
+{% include vad-pro-unboxing-video.html %}
