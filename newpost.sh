@@ -19,4 +19,4 @@ EOF
 )
 echo "${template}" >> _posts/${filename}
 
-gvim _posts/${filename}
+nvim _posts/${filename}
