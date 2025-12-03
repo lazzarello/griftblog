@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ai for babies"
+title:  "AI for Babies"
 date:  2025-12-03 08:03:04-0800
 categories: ai
 ---
