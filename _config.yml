@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -21,10 +21,10 @@
 title: Beeps and Boops
 # email: lee@teamnerds.cool
 description: >- # this means to ignore newlines until "baseurl:"
-  Occasional Notes. Music, Tech, Software.
+  Beep beep, boop boop, I'm a computer. Notes about Music, Tech, Software.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https:/blog.griftmarket.com/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  lazzarello
+github_username: lazzarello
 
 # Build settings
 plugins:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "moving off omarchy"
+title: "Moving Off Omarchy"
 date: 2026-10-09 15:49:16-0700
 categories:
   - tech
@@ -243,10 +243,9 @@ like fewer people are interested. But what I discovered is that it solves the pr
 made Omarchy appealing in the first place in a different way. And it's really cool.
 
 NixOS solves the same problem from the opposite end. The entire system is one description,
-in files, in git. Nothing is true because it happened once in a shell three months ago.
-When I wanted to replace the login stack — an invasive change, the sort of thing I'd
-normally schedule for a weekend — it was a 56-line diff in one file, and a rollback was
-one boot-menu selection away.
+in files, in git. When I wanted to replace the login stack — an invasive change, the sort
+of thing I'd normally schedule for a weekend — it was a 56-line diff in one file, and a
+rollback was one boot-menu selection away.
 
 In this case, the taste I was going for was the initial curation of Omarchy. A week later,
 with an AI coding harness and SSH access to NixOS, I had a desktop system with the same
