@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 title=$1 
 
 if [[ -z $title ]]; then
