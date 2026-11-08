@@ -4,7 +4,7 @@ title:  "Screen Recording"
 date:  2026-11-08 11:14:50-0800
 categories: [linux, nixos] 
 ---
-## Screenshots, Video, mobile sharing
+## Screenshots, video, mobile sharing
 
 *Part 3 of a series on leaving Omarchy for NixOS. [Part 0](https://blog.griftmarket.com/tech/politics/2026/10/09/moving-off-omarchy.html) is the why,
 [Part 1](https://blog.griftmarket.com/tech/nixos/2026/10/28/desktop-parts-to-whole.html) is the desktop environment, [Part 2](https://blog.griftmarket.com/linux/transcription/2026/11/07/voxtype-for-transcription.html) is
